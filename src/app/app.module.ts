@@ -14,8 +14,10 @@ import { HelloComponent } from "./hello.component";
 import { BookListComponent } from "./book-list/book-list.component";
 import { BookDetailsComponent } from "./book-details/book-details.component";
 import { AuthorListComponent } from "./author-list/author-list.component";
-import { AuthorDetailsComponent } from "./author-details/author-details.component";
 import { BookstoreListComponent } from "./bookstore-list/bookstore-list.component";
+import { BookCreateComponent } from "./book-create/book-create.component";
+import { BookstoreCreateComponent } from "./bookstore-create/bookstore-create.component";
+import { AuthorCreateComponent } from "./author-create/author-create.component";
 //import { InMemoryEventService } from './in-memory-event.service';
 //import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { environment } from '../environments/environment';
@@ -32,9 +34,11 @@ import { BookstoreListComponent } from "./bookstore-list/bookstore-list.componen
       { path: "", component: HelloComponent },
       { path: "books", component: BookListComponent },
       { path: "books/:isbn", component: BookDetailsComponent },
+      { path: "create", component: BookCreateComponent },
       { path: "authors", component: AuthorListComponent },
-      { path: "authors/:name", component: AuthorDetailsComponent },
-      { path: "bookstores", component: BookstoreListComponent }
+      { path: "authors/create", component: AuthorCreateComponent },
+      { path: "bookstores", component: BookstoreListComponent },
+      { path: "**", redirectTo: "" }
     ]),
     BrowserModule,
     FormsModule,
@@ -71,8 +75,11 @@ import { BookstoreListComponent } from "./bookstore-list/bookstore-list.componen
     BookListComponent,
     BookDetailsComponent,
     AuthorListComponent,
-    AuthorDetailsComponent,
-    BookstoreListComponent
+    BookstoreListComponent,
+    BookCreateComponent,
+    AuthorCreateComponent,
+    BookstoreCreateComponent,
+    AuthorCreateComponent
   ],
   bootstrap: [AppComponent]
 })

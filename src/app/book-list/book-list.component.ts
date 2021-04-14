@@ -43,6 +43,13 @@ export class BookListComponent implements OnInit {
       author: "Nicholas C. Zakas",
       published: 2016,
       pages: 352
+    },
+    {
+      isbn: 1234567891112,
+      title: "The Adventures of Sherlock Holmes",
+      author: "Sir Arthur Conan Doyle",
+      published: 1892,
+      pages: 307
     }
   ];
 

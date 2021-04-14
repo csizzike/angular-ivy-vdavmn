@@ -33,6 +33,11 @@ export class AuthorListComponent implements OnInit {
       name: "Nicholas C. Zakas",
       born: 1986,
       nation: "RU"
+    },
+    {
+      name: "Sir Arthur Conan Doyle",
+      born: 1859,
+      nation: "UK"
     }
   ];
 
