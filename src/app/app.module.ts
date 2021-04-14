@@ -18,6 +18,7 @@ import { BookstoreListComponent } from "./bookstore-list/bookstore-list.componen
 import { BookCreateComponent } from "./book-create/book-create.component";
 import { BookstoreCreateComponent } from "./bookstore-create/bookstore-create.component";
 import { AuthorCreateComponent } from "./author-create/author-create.component";
+import { BookService } from './book.service';
 //import { InMemoryEventService } from './in-memory-event.service';
 //import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { environment } from '../environments/environment';
@@ -81,6 +82,7 @@ import { AuthorCreateComponent } from "./author-create/author-create.component";
     BookstoreCreateComponent,
     AuthorCreateComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [BookService]
 })
 export class AppModule {}
