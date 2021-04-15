@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-author-create',
-  templateUrl: './author-create.component.html',
-  styleUrls: ['./author-create.component.css']
+  selector: "app-author-create",
+  templateUrl: "./author-create.component.html",
+  styleUrls: ["./author-create.component.css"]
 })
 export class AuthorCreateComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
