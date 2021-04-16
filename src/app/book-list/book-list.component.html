@@ -14,7 +14,7 @@
   </a>
 </div>
 
-<div style="margin-bottom: 10px" *ngFor="let book of books">
+<div style="margin-bottom: 10px" *ngFor="let book of books$ | async">
   <mat-card>
     <mat-card-header>
       <div mat-card-avatar>

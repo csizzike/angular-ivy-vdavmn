@@ -18,10 +18,11 @@ import { BookstoreListComponent } from "./bookstore-list/bookstore-list.componen
 import { BookCreateComponent } from "./book-create/book-create.component";
 import { BookstoreCreateComponent } from "./bookstore-create/bookstore-create.component";
 import { AuthorCreateComponent } from "./author-create/author-create.component";
-import { BookService } from './book.service';
-//import { InMemoryEventService } from './in-memory-event.service';
-//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-//import { environment } from '../environments/environment';
+import { BookService } from "./book.service";
+import { InMemoryBookService } from "./in-memory-book.service";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { environment } from "./environments/environment";
+
 //import { RequestService } from './request.service';
 //import { httpInterceptorProviders } from './http-interceptors';
 //import { AuthService } from './auth.service';
@@ -46,6 +47,9 @@ import { BookService } from './book.service';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    environment.isMockEnabled
+      ? HttpClientInMemoryWebApiModule.forRoot(InMemoryBookService)
+      : [],
     ReactiveFormsModule,
     MatButtonModule,
     MatCardModule,
@@ -83,6 +87,6 @@ import { BookService } from './book.service';
     AuthorCreateComponent
   ],
   bootstrap: [AppComponent],
-  providers: [BookService]
+  providers: [BookService, InMemoryBookService]
 })
 export class AppModule {}

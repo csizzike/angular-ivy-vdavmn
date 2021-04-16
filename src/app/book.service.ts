@@ -3,15 +3,17 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { BookTable } from "./book-list/books";
 
+const BOOK_URL = "api/Books";
+
 @Injectable()
 export class BookService {
   constructor(private http: HttpClient) {}
 
   getBooks() {
-    return BookTable.books;
+    return this.http.get(BOOK_URL);
   }
 
   getBook(isbn) {
-    return BookTable.books.find(e => e.isbn === isbn);
+    return this.http.get("${BOOK_URL}/${isbn}");
   }
 }
