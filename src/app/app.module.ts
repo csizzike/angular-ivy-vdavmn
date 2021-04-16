@@ -22,6 +22,7 @@ import { BookService } from "./book.service";
 import { InMemoryBookService } from "./in-memory-book.service";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { environment } from "./environments/environment";
+import { RequestService } from './request.service';
 
 //import { RequestService } from './request.service';
 //import { httpInterceptorProviders } from './http-interceptors';
@@ -87,6 +88,6 @@ import { environment } from "./environments/environment";
     AuthorCreateComponent
   ],
   bootstrap: [AppComponent],
-  providers: [BookService, InMemoryBookService]
+  providers: [BookService, InMemoryBookService, RequestService]
 })
 export class AppModule {}
